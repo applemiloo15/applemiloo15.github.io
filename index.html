@@ -1,13 +1,27 @@
 ﻿<!DOCTYPE HTML>
 <html>
-	<head></head>
+	<head>
+		<title>My Blog</title>
+	</head>
 	<body>
-		<header>
-			<h1>Hello World!</h1>
-			<h1>Hello World!</h1>
-			<h1>Hello World!</h1>
-			<h1>Hello World!</h1>
-			<h1>Hello World!</h1>
-		</header>
+		<!-- Contact form start -->
+		<article>
+			<form action="/signup" method="post">
+				<p>
+					<label>Contact Me</label>
+				</p>
+				<p>
+					<label>Who are you?</label>
+					<input name="name" type="text">
+				</p>
+				<p>
+					<label>Say something</label>
+					<textarea name="message"></textarea>
+				</p>
+				<p>
+					<button>Send</button>
+				</p>
+			</form>
+		</article>
 	</body>
 </html>
