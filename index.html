@@ -67,6 +67,15 @@
 				     ondragstart="drag(event)"
 				     width="200" height="200" alt="" />
 			</section>
+			<section>
+				<canvas id="canvas1" width="400" height="300"/>
+				<script>
+					var c=document.getElementById("canvas1");
+					var ctx=c.getContext("2d");
+					ctx.font="bold 22px Tahoma";
+					ctx.textAlign="start";
+					ctx.fillText("start", 10, 30);
+				</script>
 		</article>		
 	</body>
 </html>
