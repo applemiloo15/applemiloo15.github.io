@@ -14,7 +14,7 @@
 			function drop(ev) {
 				ev.preventDefault();
 				var data = ev.dataTransfer.getData("text");
-				ev.target.appendChild(document.getElementById(data));
+				ev.target.appendChild(document.getElementById(data).cloneNode(true));
 			}
 		</script>
 	</head>
@@ -29,6 +29,7 @@
 					<span>TO DO</span>
 				</p>
 			</section>
+			
 			<section id="contact">
 				<form method="post">
 					<p>
@@ -36,17 +37,18 @@
 					</p>
 					<p>
 						<label>Who are you?</label><br />
-						<input name="name" type="text" required>
+						<input name="name" type="text" placeholder="John" required>
 					</p>
 					<p>
 						<label>Say something</label><br />
-						<textarea name="message" required></textarea>
+						<textarea name="message" placeholder="I'm short leg. HAHA"required autofocus></textarea>
 					</p>
 					<p>
 						<button>Send</button>
 					</p>
 				</form>
-			</setcion>
+			</section>
+			
 			<section id="followpart">
 				<h1><span>Follow Me</span></h1>
 				<div>
@@ -58,7 +60,8 @@
 					</a>
 				</div>
 			</section>
-			<section>
+			
+			<section id="drag_and_drop">
 				<div id="box" ondrop="drop(event)"
 				     ondragover="allowDrop(event)"
 				     style="border:1px solid black;
@@ -67,7 +70,8 @@
 				     ondragstart="drag(event)"
 				     width="200" height="200" alt="" />
 			</section>
-			<section>
+			
+			<section id="canvas">
 				<canvas id="canvas1" width="400" height="300"/>
 				<script>
 					var c=document.getElementById("canvas1");
@@ -76,6 +80,19 @@
 					ctx.textAlign="start";
 					ctx.fillText("start", 10, 30);
 				</script>
+			</section>
+			<section id="datalist">
+				<p>
+					<h1>What are you looking for?<h1><br />
+					<input id="searchlist" type="text" list="My Education" />
+					<datalist id="my_education">
+						<option value="Elementary School">
+						<option value="Senior High School">
+						<option value="High School">
+						<option value="University">
+						<option value="Graduate School">
+					</datalist>
+				</p>
 		</article>		
 	</body>
 </html>
