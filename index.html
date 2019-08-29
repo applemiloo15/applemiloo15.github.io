@@ -103,7 +103,13 @@
 				<script>
 					function promptmessage(){
 						var person=prompt("Please enter your name");
-						if(person!=null){
+						if(person==null){
+							document.getElementById("promptclick").innerHTML="";
+						}
+						else if(person===""){
+							document.getElementById("promptclick").innerHTML="Why did you try this, idiot?";
+						}
+						else if(person!=null){
 							document.getElementById("promptclick").innerHTML="Hello "+person+"! How are you?";
 						}
 					}
