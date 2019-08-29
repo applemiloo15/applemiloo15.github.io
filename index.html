@@ -94,6 +94,20 @@
 					</datalist>
 				</p>
 			</section>
+			<section id="alert">
+				<p>
+					Click the button to show the message.
+				</p>
+				<button onclick="promptmessage()" id="promptclick">Click</button>
+				<script>
+					function promptmessage(){
+						var person=prompt("Please enter your name");
+						if(person!=null){
+							document.getElementById("promptclick").innerHTML="Hello "+person+"! How are you?";
+						}
+					}
+				</script>
+			</section>
 		</article>		
 	</body>
 </html>
